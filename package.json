@@ -1,0 +1,23 @@
+{
+  "name": "relatechatweb",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "webpack-dev-server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alubling/RelateChatWeb.git"
+  },
+  "author": "Amit Lubling <alubling@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/alubling/RelateChatWeb/issues"
+  },
+  "homepage": "https://github.com/alubling/RelateChatWeb#readme",
+  "dependencies": {
+    "react": "^0.14.3",
+    "react-dom": "^0.14.3"
+  }
+}
