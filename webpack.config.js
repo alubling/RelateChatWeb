@@ -11,7 +11,7 @@ module.exports = {
     port: 3003
   },
   plugins: [
-    new webpack.ProvidePlugin({jquery: "jquery"})
+    new webpack.ProvidePlugin({jQuery: "jquery"})
   ],
   module: {
     loaders: [

@@ -10,12 +10,13 @@ export default class UserList extends React.Component {
     return (
       <div>
         <h3>This is the list of users</h3>
-        <ListItems users={this.props.users} />
+        <ListItems users={this.props.users} onUserSelect={this.props.onUserSelect} />
       </div>
     )
   }
 }
 
 // UserList.propTypes = {
-//   users: React.propTypes.array.isRequired
+//   users: React.propTypes.array.isRequired,
+//   onUserSelect: React.propTypes.function.isRequired
 // }

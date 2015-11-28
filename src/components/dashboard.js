@@ -3,7 +3,7 @@ import { Router, Route, Link } from 'react-router';
 import Firebase from 'firebase';
 import Rebase from 're-base';
 import FireProof from 'fireproof';
-import jQuery from 'jQuery';
+import jQuery from 'jquery';
 
 // dashboard components
 import Canned from './dashboard/canned.js';
@@ -36,7 +36,7 @@ export default class Dashboard extends React.Component {
   }
   init() {
     let that = this;
-    this.ref = base.bindToState(`relaters/${this.state.relaterUid}`, {
+    this.ref = base.bindToState(`relaters/${this.state.relaterUid}/users`, {
       context: this,
       asArray: true,
       state: 'users',
