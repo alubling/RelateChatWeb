@@ -11,7 +11,7 @@ export default class UserMessages extends React.Component {
   }
 }
 
-UserList.propTypes = {
-  user: React.propTypes.object.isRequred,
-  messages: React.propTypes.array.isRequired
-}
+// UserMessages.propTypes = {
+//   user: React.propTypes.object.isRequred,
+//   messages: React.propTypes.array.isRequired
+// }

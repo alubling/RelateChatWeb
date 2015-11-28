@@ -106,52 +106,77 @@ export default class Main extends React.Component {
 // had this before but not necessary?
 // <p>Go to the <Link to="/dashboard">Dashboard</Link></p>
 
+// "ui two column middle aligned very relaxed stackable grid"
+
   render() {
     return (
         <div style={styles.mainContainer}>
-            <div>
-                <div label="Login" style={styles.formBox}>
-                  <h2>Login</h2>
-                  <div style={styles.loginFields}>
-                    <h3>Email:</h3>
-                    <input
-                      type="text"
-                      value={this.state.loginEmail}
-                      onChange={this.handleChangeToLoginEmail}
-                    />
-                    <br/>
-                    <h3>Password</h3>
-                    <input
-                      type="password"
-                      value={this.state.loginPassword}
-                      onChange={this.handleChangeToLoginPassword}
-                    />
-                    <br />
-                    <button onClick={this.submitLogin.bind(this)}>Submit</button>
-                    {this.state.error && (<p>Bad login information</p>)}
+            <div className="ui two column very relaxed centered grid">
+              <div className="four column very relaxed centered row">
+
+                <div className="column">
+                  <div className="ui form" label="Login" style={styles.formBox}>
+                    <h2 className="ui header">Login</h2>
+                    <div className="field" style={styles.loginFields}>
+                      <label>Email:</label>
+                      <div className="ui left icon input">
+                        <input
+                          type="text"
+                          value={this.state.loginEmail}
+                          onChange={this.handleChangeToLoginEmail}
+                        />
+                        <i className="user icon"></i>
+                      </div>
+                      <br/>
+                      <label>Password</label>
+                      <div className="ui left icon input">
+                        <input
+                          type="password"
+                          value={this.state.loginPassword}
+                          onChange={this.handleChangeToLoginPassword}
+                        />
+                        <i className="lock icon"></i>
+                      </div>
+                      <br/>
+                      <button className="ui blue submit button" onClick={this.submitLogin.bind(this)}>Submit</button>
+                      {this.state.error && (<div className="ui pointing red basic label">Bad login information</div>)}
+                    </div>
                   </div>
                 </div>
-                <div label="Sign Up" style={styles.formBox}>
-                  <h2>Sign Up</h2>
-                  <div style={styles.loginFields}>
-                    <h3>Email:</h3>
-                    <input
-                      type="text"
-                      value={this.state.signupEmail}
-                      onChange={this.handleChangeToSignupEmail}
-                    />
-                    <br/>
-                    <h3>Password</h3>
-                    <input
-                      type="password"
-                      value={this.state.signupPassword}
-                      onChange={this.handleChangeToSignupPassword}
-                    />
-                    <br />
-                    <button onClick={this.submitSignUp.bind(this)}>Submit</button>
+
+                  <div className="ui vertical divider">OR</div>
+
+                <div className="column">
+                  <div className="ui form" label="Sign Up" style={styles.formBox}>
+                    <h2 className="ui header">Sign Up</h2>
+                    <div className="field" style={styles.loginFields}>
+                      <label>Email:</label>
+                      <div className="ui left icon input">
+                        <input
+                          type="text"
+                          value={this.state.signupEmail}
+                          onChange={this.handleChangeToSignupEmail}
+                        />
+                        <i className="user icon"></i>
+                      </div>
+                      <label>Password</label>
+                      <div className="ui left icon input">
+                        <input
+                          type="password"
+                          value={this.state.signupPassword}
+                          onChange={this.handleChangeToSignupPassword}
+                        />
+                        <i className="lock icon"></i>
+                      </div>
+                      <br/>
+                      <button className="ui blue submit button" onClick={this.submitSignUp.bind(this)}>Submit</button>
+                    </div>
                   </div>
                 </div>
+
+              </div>
             </div>
+          <br/>
             {this.props.children || "Welcome to the sightings app"}
         </div>
     )
@@ -159,25 +184,26 @@ export default class Main extends React.Component {
 }
 
 var styles = {
-  mainContainer: {
-    display: 'flex',
-    flexDirection: 'column',
-    //justifyContent: 'center',
-    //alignItems: 'center'
-  },
-  card: {
-    width: '25%'
-  },
+  // mainContainer: {
+  //   display: 'flex',
+  //   flexDirection: 'column',
+  //   //justifyContent: 'center',
+  //   //alignItems: 'center'
+  // },
+  // card: {
+  //   width: '25%'
+  // },
   formBox: {
-    borderStyle: 'solid', // for some reason this is necessary to get anything to display
-    borderWidth: 1,
-    borderColor: 'red',
-    borderRadius: 8,
-  },
-  loginFields: {
-    marginLeft: 10,
-    marginBottom: 30
-  }
+  //   borderStyle: 'solid', // for some reason this is necessary to get anything to display
+  //   borderWidth: 1,
+  //   borderColor: 'red',
+  //   borderRadius: 8,
+  width: 250
+   },
+  // loginFields: {
+  //   marginLeft: 10,
+  //   marginBottom: 30
+  // }
 };
 
 Main.contextTypes = {

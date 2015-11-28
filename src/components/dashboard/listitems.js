@@ -13,6 +13,7 @@ export default class ListItems extends React.Component {
   }
 }
 
-ListItems.propTypes = {
-  users: React.propTypes.array.isRequired
-}
+// ListItems.propTypes = {
+//   users: React.propTypes.array.isRequired,
+//   onUserSelect: React.propTypes.function.isRequired,
+// }
