@@ -10,6 +10,9 @@ module.exports = {
     contentBase: './dist/',
     port: 3003
   },
+  plugins: [
+    new webpack.ProvidePlugin({jQuery: "jquery"})
+  ],
   module: {
     loaders: [
       {

@@ -27,7 +27,7 @@ ReactDOM.render((
       <IndexRoute component={Main}/>
         <Route name="logout" path="/logout" component={Logout} />
         <Route name="about" path="/about" component={About} />
-        <Route name="dashboard" path="/dashboard" component={Dashboard} onEnter={requireAuth}/>
+        <Route name="dashboard" path="/dashboard/:relaterId" component={Dashboard} onEnter={requireAuth}/>
     </Route>
   </Router>
 ), document.getElementById('app'));
