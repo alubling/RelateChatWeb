@@ -104,11 +104,10 @@ export default class Dashboard extends React.Component {
     return (
       <div>
         <h1>This is the dashboard for {this.state.relaterUid}</h1>
-        <div>
-          <UserList users={this.state.users} onUserSelect={this.onUserSelect}/>
-        </div>
-        <div>
-
+        <div className="ui grid">
+          <div className="two wide column">
+            <UserList users={this.state.users} onUserSelect={this.onUserSelect}/>
+          </div>
         </div>
       </div>
     )

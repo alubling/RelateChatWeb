@@ -39,16 +39,26 @@ export default class Default extends React.Component {
       loginOrOut = <Link to="/">Login</Link>;
       register = <Link to="/">Sign Up</Link>;
     };
+    // <h1 style={styles.center}>Once more unto the breach dear friends to the Relate Chat Web App</h1>
+    // <ul>
+    //   <li>{register}</li>
+    //   <li>{loginOrOut}</li>
+    //   <li><Link to="/about">About</Link></li>
+    // </ul>
     return (
       <div>
-        <h1 style={styles.center}>Once more unto the breach dear friends to the Relate Chat Web App</h1>
-        <ul>
-          <li>{register}</li>
-          <li>{loginOrOut}</li>
-          <li><Link to="/about">About</Link></li>
-        </ul>
-        {this.props.children}
-      </div>
+        <div className="ui secondary menu">
+          <a className="active item">Home</a>
+          <div className="item">
+            <Link to="/about">About</Link>
+          </div>
+          <div className="right menu">
+            <div className="item">{register}</div>
+            <div className="item">{loginOrOut}</div>
+          </div>
+        </div>
+      {this.props.children}
+    </div>
     )
   }
 }
